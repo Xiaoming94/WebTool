@@ -9,6 +9,19 @@
   <strong>Content:</strong>
   <%= @article.content %>
 </p>
+<h2>Comments</h2>
+<%= @article.comments.each do |c| %>
+    <p>
+        <strong>Commenter: </strong>
+        <%= c.commenter %>
+    </p>
+
+    <p>
+        <strong>Comment: </strong>
+        <%= c.body %>
+    </p>
+<% end %>
+
 <h2>Add a Comment</h2>
 <%= form_for ([@article, @article.comments.build]) do |f| %>
     <p>
