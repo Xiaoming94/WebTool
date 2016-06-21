@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'webpage/index'
+
   resources :pages
   resources :articles do 
     resources :comments
