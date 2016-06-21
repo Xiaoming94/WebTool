@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'webpage/index'
+  root 'webpage#index'
 
   resources :pages
   resources :articles do 
