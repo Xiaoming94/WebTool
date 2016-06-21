@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'adminpanel/index'
+
   root 'webpage#index'
 
   resources :pages
