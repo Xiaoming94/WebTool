@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'adminpanel/index'
+  get 'adminpanel', to: 'adminpanel#index'
 
   root 'webpage#index'
 
