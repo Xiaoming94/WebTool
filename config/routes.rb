@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   get 'adminpanel', to: 'adminpanel#index'
 
   root 'webpage#index'
