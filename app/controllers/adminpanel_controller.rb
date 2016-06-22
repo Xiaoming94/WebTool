@@ -3,5 +3,6 @@ class AdminpanelController < ApplicationController
   end
 
   def newpost
+    @article = Article.new
   end
 end
