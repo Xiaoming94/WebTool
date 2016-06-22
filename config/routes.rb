@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'users/new'
 
   get 'adminpanel', to: 'adminpanel#index'
+  
+  match 'adminpanel/:action' => 'adminpanel#:action', via: [:get]
 
   root 'webpage#index'
 
