@@ -5,4 +5,8 @@ class AdminpanelController < ApplicationController
   def newpost
     @article = Article.new
   end
+
+  def posts
+    @articles = Article.all
+  end
 end
