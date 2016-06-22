@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
+  root 'webpage#index'
+
   get 'users/new'
 
   get 'adminpanel', to: 'adminpanel#index'
-  
-  match 'adminpanel/:action' => 'adminpanel#:action', via: [:get]
 
-  root 'webpage#index'
+  match 'adminpanel/:action' => 'adminpanel#:action', via: [:get]
 
   resources :pages
   resources :articles do 
