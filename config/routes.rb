@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   match 'adminpanel/:action' => 'adminpanel#:action', via: [:get]
 
-  get 'pages/:title', to: 'pages#show'
+  get 'page/:title', to: 'pages#showbytitle'
   resources :pages
   resources :articles do 
     resources :comments
