@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'adminpenl', to: 'adminpanel#index'
   match 'adminpanel/:action' => 'adminpanel#:action', via: [:get]
 
-  get 'page/:title', to: 'pages#showbytitle'
+  get 'pages/:title', to: 'pages#showbytitle'
   namespace :adminpanel do
     resources :pages
     resources :articles
