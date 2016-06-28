@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'webpage#index'
 
   get 'users/new'
-  get 'adminpenl', to: 'adminpanel#index'
+  get 'adminpanel', to: 'adminpanel#index'
   match 'adminpanel/:action' => 'adminpanel#:action', via: [:get]
 
   get 'pages/:title', to: 'pages#showbytitle'
