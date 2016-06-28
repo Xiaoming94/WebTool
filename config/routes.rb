@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :pages
     resources :articles
   end
-  resources :articles do 
+  resources :articles , :only => [:show] do 
     resources :comments
   end
 
