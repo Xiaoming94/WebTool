@@ -9,5 +9,6 @@
   <strong>Content:</strong>
   <%= markdown @article.content %>
 </p>
-<h2>Comments</h2>
-<%= render @article.comments %>
+
+<%= link_to 'Edit', edit_admin_article_path(@article) %> |
+<%= link_to 'Back', admin_articles_path %>
