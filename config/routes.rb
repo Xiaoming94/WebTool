@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'adminpanel', to: 'adminpanel#index'
 
   get 'pages/:title', to: 'pages#showbytitle'
-  namespace :adminpanel do
+  namespace :admin do
     resources :pages
     resources :articles
   end

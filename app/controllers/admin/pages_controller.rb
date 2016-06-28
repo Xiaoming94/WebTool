@@ -1,4 +1,4 @@
-class Adminpanel::PagesController < ApplicationController
+class Admin::PagesController < ApplicationController
   before_action :set_page, only: [:show, :edit, :update, :destroy]
 
   # GET /pages
