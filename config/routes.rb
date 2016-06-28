@@ -1,18 +1,19 @@
 Rails.application.routes.draw do
+
   root 'webpage#index'
 
   get 'users/new'
 
-  get 'adminpanel', to: 'adminpanel#index'
-
   match 'adminpanel/:action' => 'adminpanel#:action', via: [:get]
 
   get 'page/:title', to: 'pages#showbytitle'
-  resources :pages
+  namespace :adminpanel do
+    resources :pages
+    resources :articles
+  end
   resources :articles do 
     resources :comments
   end
-  resource :articles
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
