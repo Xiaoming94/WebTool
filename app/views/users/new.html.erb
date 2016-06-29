@@ -1,2 +1,31 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<%= @page_title = "UserAuth | Signup" %>
+<div class="Sign_Form">
+	<h1>Sign Up</h1>
+	<%= form_for(:user,
+				 url: {:controller => 'users', :action => 'create'}) do |f| %>
+		<p>
+			<strong>Username: </strong></br>
+			<%= f.text_field :username %>
+		</p>
+		<p>
+			<strong>Email: </strong></br>
+			<%= f.text_field :email %>
+		</p>
+		<p>
+			<strong>Password: </strong></br>
+			<%= f.password_field :password  %>
+		</p>
+		<p>
+			<strong>Password Confirmation: </strong></br>
+			<%= f.password_field :password_confirmation  %>
+		</p>
+		<%= f.submit :Signup %>
+	<% end %>
+	<% if @user.errors.any? %>
+		<ul class="Signup_Errors">
+		<% for message_error in @user.errors.full_messages %>
+			<li> <%= message_error %>
+		<% end %>
+		</ul>
+	<% end %>
+</div>
