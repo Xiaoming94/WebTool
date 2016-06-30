@@ -9,7 +9,7 @@
 <body>
 
 	<%= yield %>
-	<%= if Rails.env.development? %>
+	<% if Rails.env.development? %>
 		<div class="debug-box">
 			<%= debug(params) %>
 		
