@@ -7,7 +7,9 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
-
+	<% flash.each do |key,value| %>
+		<div class="flash flash-<%= key %>"><%= value %></div>
+	<% end %>
 	<%= yield %>
 	<% if Rails.env.development? %>
 		<div class="debug-box">
