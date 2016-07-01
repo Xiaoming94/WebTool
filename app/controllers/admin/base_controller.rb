@@ -16,4 +16,9 @@ class Admin::BaseController < ApplicationController
       flash.now[:danger] = "Invalid Username/Password Combination"
     end
   end
+
+  def destroy
+    log_out
+    redirect_to admin_root_path
+  end
 end
