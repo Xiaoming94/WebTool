@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     root 'base#index'
     get 'login', to: 'base#login'
     post 'login', to: 'base#create'
+    delete 'logout', to: 'base#destroy'
     resources :pages
     resources :articles
   end
