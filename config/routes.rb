@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'pages/:title', to: 'pages#showbytitle'
   namespace :admin do
     root 'base#index'
+    get 'login', to: 'base#login'
+    post 'login', to: 'base#create'
     resources :pages
     resources :articles
   end
