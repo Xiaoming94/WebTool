@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 
   get 'pages/:title', to: 'pages#showbytitle'
   namespace :admin do
-    root to: "basecontroller#index" 
     resources :pages
     resources :articles
   end
