@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     get 'login', to: 'base#login'
     post 'login', to: 'base#create'
     delete 'logout', to: 'base#destroy'
+    get 'forbidden', to: 'base#forbidden'
     resources :pages
     resources :articles
   end

@@ -1,5 +1,5 @@
 class Admin::BaseController < ApplicationController
-  before_action :test_is_admin, except: [:create, :login, :destroy]
+  before_action :test_is_admin, except: [:create, :login, :destroy, :forbidden]
   def index
   end
 
@@ -21,12 +21,15 @@ class Admin::BaseController < ApplicationController
     redirect_to admin_root_path
   end
 
+  def forbidden
+    render :stop
+  end
   private
   def test_is_admin
     if !is_logged_in?
       redirect_to admin_login_path
     elsif !is_admin?
-      render 'stop'
+      redirect_to admin_forbidden_path
     end
   end
 
