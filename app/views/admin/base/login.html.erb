@@ -1,1 +1,13 @@
 <h1>Login: </h1>
+
+<%= form_for(:base, url: admin_login_path) do |f|%>
+	<div class="field">
+		<strong><%= f.label :username %></strong></br>
+		<%= f.text_field :username%>
+	</div>
+	<div class="field">
+		<strong><%= f.label :password %></strong></br>
+		<%= f.password_field :password %>
+	</div>
+	<%= f.submit "Log in" %>
+<% end %>
