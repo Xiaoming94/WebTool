@@ -8,5 +8,12 @@ class Admin::BaseController < ApplicationController
   end
 
   def create
+    user = User.find_by(:username => params[:base][:username])
+    if user && user.authenticate(params[:base][:password])
+      log_in user
+      redirect_to (admin_root_path)
+    else
+      flash.now[:danger] = "Invalid Username/Password Combination"
+    end
   end
 end
