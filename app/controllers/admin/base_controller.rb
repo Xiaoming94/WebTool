@@ -5,6 +5,8 @@ class Admin::BaseController < ApplicationController
     end
   end
   def login
-  
+  end
+
+  def create
   end
 end
