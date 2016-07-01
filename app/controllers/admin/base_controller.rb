@@ -1,9 +1,8 @@
 class Admin::BaseController < ApplicationController
+  before_action :test_is_admin, except: [:create]
   def index
-    if !is_logged_in?
-      redirect_to url_for(admin_login_path)
-    end
   end
+
   def login
   end
 
@@ -21,4 +20,14 @@ class Admin::BaseController < ApplicationController
     log_out
     redirect_to admin_root_path
   end
+
+  private
+  def test_is_admin
+    if !is_logged_in?
+      redirect_to admin_login_path
+    elsif !is_admin
+      render 'stop'
+    end
+  end
+
 end
