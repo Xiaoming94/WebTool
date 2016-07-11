@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160630082128) do
+ActiveRecord::Schema.define(version: 20160711033346) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -38,6 +38,13 @@ ActiveRecord::Schema.define(version: 20160630082128) do
   end
 
   add_index "pages", ["title"], name: "index_pages_on_title", unique: true, using: :btree
+
+  create_table "resumes", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "attachment", limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name",            limit: 255
