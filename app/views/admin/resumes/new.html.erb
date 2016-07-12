@@ -8,7 +8,7 @@
 	</div>
 <% end %>
 
-<%= form_for @resume, html: {multipart: true} do |f|%>
+<%= form_for ([:admin ,@resume]), html: {multipart: true} do |f|%>
 	<%= f.label :name %>
 	<%= f.text_field :name %>
 	<%= f.label :attachment %>
