@@ -1,3 +1,6 @@
+<% flash.each do |key,value| %>
+	<div class="flash flash-<%= key %>"><%= value %></div>
+<% end %>
 <h1>Login: </h1>
 
 <%= form_for(:base, url: admin_login_path) do |f|%>
