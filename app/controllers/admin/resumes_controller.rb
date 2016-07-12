@@ -10,7 +10,7 @@ class Admin::ResumesController < Admin::BaseController
   def create
     @resume = Resume.new(resume_params)
     if @resume.save
-      redirect_to resumes_path, notice: "The resume #{@resume.name} has been uploaded"
+      redirect_to admin_resumes_path, notice: "The resume #{@resume.name} has been uploaded"
     else
       render "new"
     end
@@ -19,7 +19,7 @@ class Admin::ResumesController < Admin::BaseController
   def destroy
     @resume = Resume.find(params[:id])
     @resume.destroy
-    redirect_to resumes_path, notice: "The resume #{@resume.name} has been deleted"
+    redirect_to admin_resumes_path, notice: "The resume #{@resume.name} has been deleted"
   end
 
   private
