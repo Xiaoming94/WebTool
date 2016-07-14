@@ -24,6 +24,10 @@ class Admin::ResumesController < Admin::BaseController
 
   private
     def resume_params
-      params.require(:resume).permit(:name, :attachment, :type)
+      params.require(item.underscore.to_sym).permit(:name, :attachment, :type)
+    end
+
+    def item
+      params[:type]
     end
 end
