@@ -1,6 +1,5 @@
 class Admin::ResumesController < Admin::BaseController
   def index
-    @resumes = Resume.all
   end
 
   def new
