@@ -24,6 +24,6 @@ class Admin::ResumesController < Admin::BaseController
 
   private
     def resume_params
-      params.require(:resume).permit(:name, :attachment)
+      params.require(:resume).permit(:name, :attachment, :type)
     end
 end
