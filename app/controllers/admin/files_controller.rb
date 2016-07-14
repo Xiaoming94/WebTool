@@ -1,2 +1,2 @@
-class Admin::FilesController < ApplicationController
+class Admin::FilesController < Admin::ResumesController
 end
