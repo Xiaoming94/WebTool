@@ -17,7 +17,8 @@ Rails.application.routes.draw do
     get 'forbidden', to: 'base#forbidden'
     resources :pages
     resources :articles
-    resources :images, :only => [:index, :new, :create, :destroy], type: 'image'
+    resources :images, :only => [:index, :new, :create, :destroy]
+    resources :items, :only => [:index, :new, :create, :destroy]
   end
   resources :articles , :only => [:index ,:show] do 
     resources :comments
