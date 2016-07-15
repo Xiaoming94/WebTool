@@ -19,7 +19,7 @@
 		<% @images.each do |image| %>
 			<tr>
 				<td><%= image.name %></td>
-				<td><%= link_to "Download Resume", image.attachment_url %></td>
+				<td><%= link_to "Download Image", image.attachment %></td>
 				<td><%= button_to "Delete", admin_image_path(image) , :method => :delete, confirm: "Are you sure" %></td>
 			</tr>
 		<% end %>
