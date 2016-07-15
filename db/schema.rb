@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160711033346) do
+ActiveRecord::Schema.define(version: 20160715035931) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20160711033346) do
     t.string   "attachment", limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.string   "filetype",   limit: 255
   end
 
   create_table "users", force: :cascade do |t|
