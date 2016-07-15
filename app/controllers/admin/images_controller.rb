@@ -1,4 +1,4 @@
-class Admin::ResumesController < Admin::BaseController
+class Admin::ImagesController < Admin::BaseController
   def index
     @images = Resume.all
   end
