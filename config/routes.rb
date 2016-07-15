@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     resources :pages
     resources :articles
     resources :images, :only => [:index, :new, :create, :destroy], type: 'image'
-    resources :files, :only => [:index, :new, :create, :destroy], type: 'file'
+    resources :stuff, controller: 'files', :only => [:index, :new, :create, :destroy], type: 'file'
   end
   resources :articles , :only => [:index ,:show] do 
     resources :comments
