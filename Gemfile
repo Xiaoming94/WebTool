@@ -28,6 +28,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'carrierwave'
 
+gem 'mini_magick'
+
 gem 'github-markdown'
 
 # Use Unicorn as the app server

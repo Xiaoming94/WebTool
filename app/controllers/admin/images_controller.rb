@@ -8,7 +8,7 @@ class Admin::ImagesController < Admin::BaseController
   end
 
   def create
-    @image = Image.new(resume_params)
+    @image = Image.new(image_params)
     if @image.save
       redirect_to admin_images_path, notice: "The resume #{@image.name} has been uploaded"
     else
@@ -23,7 +23,7 @@ class Admin::ImagesController < Admin::BaseController
   end
 
   private
-    def resume_params
+    def image_params
       params.require(:image).permit(:name, :attachment)
     end
 end
