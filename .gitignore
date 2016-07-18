@@ -100,3 +100,4 @@ bower.json
 
 # ignoring uploads
 public/uploads
+public/assets
