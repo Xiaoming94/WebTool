@@ -9,6 +9,7 @@ class Admin::ItemsController < Admin::BaseController
 
   def create
     @item = Item.new(item_params)
+    @item.filetype = 'item'
     if @item.save
       redirect_to admin_items_path, notice: "The resume #{@item.name} has been uploaded"
     else

@@ -9,6 +9,7 @@ class Admin::ImagesController < Admin::BaseController
 
   def create
     @image = Image.new(image_params)
+    @image.filetype = 'image'
     if @image.save
       redirect_to admin_images_path, notice: "The resume #{@image.name} has been uploaded"
     else
