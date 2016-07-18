@@ -7,12 +7,14 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
-	<%= yield %>
-	<% if Rails.env.development? %>
-		<div class="debug-box">
-			<%= debug(params) %>
+	<div class="wrapper">
+		<%= yield %>
+			<% if Rails.env.development? %>
+			<div class="debug-box">
+				<%= debug(params) %>
 		
-		</div>
-	<% end %>
+			</div>
+		<% end %>
+	</div>
 </body>
 </html>
