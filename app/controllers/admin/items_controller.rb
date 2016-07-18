@@ -10,20 +10,20 @@ class Admin::ItemsController < Admin::BaseController
   def create
     @item = Item.new(item_params)
     if @item.save
-      redirect_to admin_items_path, notice: "The resume #{@image.name} has been uploaded"
+      redirect_to admin_items_path, notice: "The resume #{@item.name} has been uploaded"
     else
       render "new"
     end
   end
 
   def destroy
-    @item = Image.find(params[:id])
+    @item = Item.find(params[:id])
     @item.destroy
-    redirect_to admin_items_path, notice: "The resume #{@image.name} has been deleted"
+    redirect_to admin_items_path, notice: "The resume #{@item.name} has been deleted"
   end
 
   private
-    def image_params
+    def item_params
       params.require(:item).permit(:name, :attachment)
     end
 end
