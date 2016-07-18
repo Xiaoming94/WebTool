@@ -32,6 +32,7 @@ gem 'mini_magick'
 
 gem 'github-markdown'
 
+gem 'materialize-sass'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
