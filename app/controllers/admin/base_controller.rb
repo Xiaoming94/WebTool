@@ -1,5 +1,6 @@
 class Admin::BaseController < ApplicationController
   before_action :test_is_admin, except: [:create, :login, :destroy, :forbidden]
+  layout "admin", except: [:create, :login, :forbidden, :destroy]
   def index
   end
 
