@@ -9,12 +9,12 @@
 <body>
 	<div class="login">
 		<%= yield %>
-			<% if Rails.env.development? %>
-			<div class="debug-box">
-				<%= debug(params) %>
-		
-			</div>
-		<% end %>
 	</div>
+	<% if Rails.env.development? %>
+		<div class="debug-box">
+			<%= debug(params) %>
+		
+		</div>
+	<% end %>
 </body>
 </html>
