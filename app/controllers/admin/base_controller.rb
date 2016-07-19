@@ -4,6 +4,7 @@ class Admin::BaseController < ApplicationController
   end
 
   def login
+    render layout: "login"
   end
 
   def create
