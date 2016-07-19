@@ -8,8 +8,11 @@
 	top: 0;
 	left: 0;
 	overflow: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	h1 {
-		font-size: 5em;
+		font-size: 3em;
 	}
 }
 
