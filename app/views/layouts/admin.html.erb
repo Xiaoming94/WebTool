@@ -10,8 +10,14 @@
 <body>
 	<div class="wrapper">
 		<div class="header">
-			<h1>Admin Panel</h1>
-			<%= link_to "Log Out", admin_logout_path, method: "delete" %>
+			<nav>
+				<div class="nav-wrapper">
+				<header>
+				<h1>Admin Panel</h1>
+				<%= link_to "Log Out", admin_logout_path, method: "delete" %>
+				</header>
+				</div>
+			</nav>
 		</div >
 		<div class="sidebar">
 			<ul>
