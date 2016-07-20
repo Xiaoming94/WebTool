@@ -2,12 +2,9 @@
 	overflow: auto;
 	h1 {
 		font: $main-font;
+		font-size: 3em;
 		margin: 0;
 		width: auto;
 		display: inline-block;
-		padding {
-			top: 10px;
-			bottom: 10px;
-		}
 	}
 }
