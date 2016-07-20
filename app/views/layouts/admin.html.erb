@@ -9,15 +9,14 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="header">
+		<div class="header z-depth-1">
 			<nav>
-				<div class="nav-wrapper">
-				<header>
-				<h1>Admin Panel</h1>
-				<ul class="header-links right">
-					<li><%= link_to "Log Out", admin_logout_path, method: "delete" %></li>
+				<div class="nav-wrapper red">
+					<h1>Admin Panel</h1>
+					<ul id="nav-mobile" class="header-links right">
+						<li><%= link_to "Log Out", admin_logout_path, method: "delete" %></li>
+						<li>Second Item<li>
 				</ul>
-				</header>
 				</div>
 			</nav>
 		</div >
