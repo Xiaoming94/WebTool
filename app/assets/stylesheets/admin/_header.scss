@@ -1,9 +1,9 @@
 .header {
 	overflow: auto;
 	height: 3.5em;
+	font: 100% $main-font;
 	h1 {
-		font: $main-font;
-		font-size: 3em;
+		font-size: 2.5em;
 		margin: 0;
 		width: auto;
 		display: inline;
@@ -19,7 +19,12 @@
 			a {
 				font-size: inherit;
 				height: inherit;
-				padding: 12px;
+				padding: {
+					top: 14px;
+					bottom: 14px;
+					right: 14px;
+					left: 16px;
+				}
 			}
 		}
 	}
