@@ -10,8 +10,17 @@
 	}
 	ul {
 		list-style: none;
+		height: 100%;
 		li {
+			display: inline-block;
 			float:left;
+			font-size: 1.5em;
+			height: inherit;
+			a {
+				font-size: inherit;
+				height: inherit;
+				padding: 12px;
+			}
 		}
 	}
 	nav {
