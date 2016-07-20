@@ -19,7 +19,7 @@
 				</div>
 			</nav>
 		</div >
-		<div class="sidebar">
+		<div class="sidebar left">
 			<ul>
 				<li><%= link_to "Dashboard", admin_root_path %></li>
 				<li><%= link_to "Articles", admin_articles_path %></li>
@@ -28,13 +28,18 @@
 				<li>Account Settings</li>
 			</ul>
 		</div>
-		<%= yield %>
-			<% if Rails.env.development? %>
+		<main>
+		<div class="content right row">
+			<%= yield %>
+		</div>
+		<main>
+		<footer class="page-footer">
+		<% if Rails.env.development? %>
 			<div class="debug-box">
 				<%= debug(params) %>
-		
 			</div>
 		<% end %>
+		<footer>
 	</div>
 </body>
 </html>
