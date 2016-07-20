@@ -15,7 +15,7 @@ class Admin::BaseController < ApplicationController
       redirect_to (admin_root_path)
     else
       flash.now[:danger] = "Invalid Username/Password Combination"
-      render "login"
+      render "login", layout: "login"
     end
   end
 
