@@ -20,28 +20,28 @@
 			</nav>
 		</div >
 		<div class="row">
-		<div class="sidebar col s2">
-			<ul>
-				<li><%= link_to "Dashboard", admin_root_path %></li>
-				<li><%= link_to "Articles", admin_articles_path %></li>
-				<li><%= link_to "Pages" , admin_pages_path %></li>
-				<li>Uploads</li>
-				<li>Account Settings</li>
-			</ul>
-		</div>
-		<main>
-			<div class="content col s10">
-				<%= yield %>
+			<div class="sidebar col s2">
+				<ul>
+					<li><%= link_to "Dashboard", admin_root_path %></li>
+					<li><%= link_to "Articles", admin_articles_path %></li>
+					<li><%= link_to "Pages" , admin_pages_path %></li>
+					<li>Uploads</li>
+					<li>Account Settings</li>
+				</ul>
 			</div>
-		</main>
+			<div class="col s10 content right">
+				<main>
+					<%= yield %>
+				</main>
+				<footer>
+					<% if Rails.env.development? %>
+					<div class="debug-box">
+						<%= debug(params) %>
+					</div>
+					<% end %>
+				</footer>
+			</div>
 		</div>
-		<footer>
-			<% if Rails.env.development? %>
-				<div class="debug-box">
-					<%= debug(params) %>
-				</div>
-			<% end %>
-		</footer>
 	</div>
 </body>
 </html>
