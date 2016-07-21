@@ -11,15 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form card white">
+	  <div class="card-content">
+	<div class="field">
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+	</div>
+	<div class="field">
+		<%= f.label :content %><br>
+		<%= f.text_area :content , class: "materialize-textarea" %>
+	</div>
+	<div class="actions">
+		<%= f.submit class: "btn" %>
+	</div>
+	</div>
   </div>
 <% end %>
