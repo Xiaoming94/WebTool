@@ -1,22 +1,26 @@
 <div class="dashboard">
 	<div id="greeting-card" class="card white">
 		<div class="card-content">
-		<h1>Greetings! </h1>
-		<span>
-			Welcome to the admin panel dashboard.
-			From here, you can manage your articles, pages, uploads
-			aswell as changing you accounts password.
-			<br /><br />
-			Below are some useful links, Enjoy your time!
-		</span>
+			<h1>Greetings! </h1>
+			<span>
+				Welcome to the admin panel dashboard.
+				From here, you can manage your articles, pages, uploads
+				aswell as changing you accounts password.
+				<br /><br />
+				Below are some useful links, Enjoy your time!
+			</span>
 		</div>
 	</div>
-	<div id="articles">
-		<h2>Articles</h2>
-		<span>
-			Here you can view your articles, edit them, and write new ones!<br />
-			<%= link_to "Manage articles" , admin_articles_path , class: "btn" %>
-			<%= link_to "New article", new_admin_article_path , class: "btn" %>
-		</span>
+	<div class="row">
+		<div id="articles" class="col s4 card white">
+			<div class="card-content">
+			<h2>Articles</h2>
+			<span>
+				Here you can view your articles, edit them, and write new ones!<br /><br />
+				<%= link_to "Manage articles" , admin_articles_path , class: "btn" %>
+				<%= link_to "New article", new_admin_article_path , class: "btn" %>
+			</span>
+			</div>
+		</div>
 	</div>
 </div>
