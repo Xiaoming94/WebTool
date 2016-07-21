@@ -12,7 +12,8 @@
 		</div>
 	</div>
 	<div class="row">
-		<div id="articles" class="col s4 card white">
+		<div id="articles" class="col s6">
+			<div class="card white">
 			<div class="card-content">
 			<h2>Articles</h2>
 			<span>
@@ -22,8 +23,10 @@
 				<%= link_to "New article", new_admin_article_path , class: "btn black-text" %>
 			</span>
 			</div>
+			</div>
 		</div>
-		<div id="pages" class="col s4 card white">
+		<div id="pages" class="col s6">
+			<div class="card white">
 			<div class="card-content">
 			<h2>Pages</h2>
 			<span>Manage all your pages.<br />
@@ -32,6 +35,7 @@
 				<%= link_to "Manage pages", admin_pages_path , class: "btn black-text" %>
 				<%= link_to "New page", new_admin_page_path , class: "btn black-text" %>
 			</span>
+			</div>
 			</div>
 		</div>
 	</div>
