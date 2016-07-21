@@ -16,9 +16,21 @@
 			<div class="card-content">
 			<h2>Articles</h2>
 			<span>
+				Manage all your articles <br />
 				Here you can view your articles, edit them, and write new ones!<br /><br />
 				<%= link_to "Manage articles" , admin_articles_path , class: "btn black-text" %>
 				<%= link_to "New article", new_admin_article_path , class: "btn black-text" %>
+			</span>
+			</div>
+		</div>
+		<div id="pages" class="col s4 card white">
+			<div class="card-content">
+			<h2>Pages</h2>
+			<span>Manage all your pages.<br />
+				Here you can create new pages, aswell as editing already existing ones.
+				<br /><br />
+				<%= link_to "Manage pages", admin_pages_path , class: "btn black-text" %>
+				<%= link_to "Manage pages", new_admin_page_path , class: "btn black-text" %>
 			</span>
 			</div>
 		</div>
