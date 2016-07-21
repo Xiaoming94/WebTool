@@ -15,7 +15,10 @@
 					left: 13px;
 					right: 10px;
 				}
-				
+				color: #000;
+				&:hover{
+					background-color: #dddddd;
+				}
 			}
 		}
 	}
