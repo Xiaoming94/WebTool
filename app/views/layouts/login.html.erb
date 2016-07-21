@@ -8,13 +8,14 @@
 </head>
 <body>
 	<div class="login">
+		<div class="container">
 		<%= yield %>
-	</div>
-	<% if Rails.env.development? %>
-		<div class="debug-box">
-			<%= debug(params) %>
-		
+		<% if Rails.env.development? %>
+			<div class="debug-box card black white-text">
+				<%= debug(params) %>
+			</div>
+		<% end %>
 		</div>
-	<% end %>
+	</div>
 </body>
 </html>
