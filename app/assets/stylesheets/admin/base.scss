@@ -10,3 +10,10 @@
 @import "sidebar";
 @import "content";
 @import "footer";
+.admin-wrapper {
+	font: 100% $main-font;
+	background: #efefef;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
