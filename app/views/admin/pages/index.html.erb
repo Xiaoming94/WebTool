@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
-
+<div class="admin-container">
 <h1>Listing Pages</h1>
-
-<table>
+<div class="card white">
+	<div class="card-content">
+	<table>
   <thead>
     <tr>
       <th>Title</th>
@@ -24,6 +25,9 @@
   </tbody>
 </table>
 
+	</div>
+</div>
 <br>
 
-<%= link_to 'New Page', new_admin_page_path %>
+<%= link_to 'New Page', new_admin_page_path, class: "btn black-text" %>
+</div>
