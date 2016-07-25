@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     post 'login', to: 'base#create'
     delete 'logout', to: 'base#destroy'
     get 'forbidden', to: 'base#forbidden'
-    get 'uploads/index'
+    get 'uploads', to: 'uploads#index'
     resources :pages
     resources :articles
     resources :images, :only => [:index, :new, :create, :destroy]
