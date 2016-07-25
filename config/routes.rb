@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+  get 'uploads/index'
+  end
+
   root 'webpage#index'
 
   get 'signup', to: 'users#new'
