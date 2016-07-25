@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  namespace :admin do
-  get 'uploads/index'
-  end
-
   root 'webpage#index'
 
   get 'signup', to: 'users#new'
@@ -19,6 +15,7 @@ Rails.application.routes.draw do
     post 'login', to: 'base#create'
     delete 'logout', to: 'base#destroy'
     get 'forbidden', to: 'base#forbidden'
+    get 'uploads/index'
     resources :pages
     resources :articles
     resources :images, :only => [:index, :new, :create, :destroy]
