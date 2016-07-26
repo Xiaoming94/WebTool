@@ -10,7 +10,13 @@
 		<div class="card-content">
 			Here are all your images: <br />
 			<%@images.reverse.each do |image| %>
+				<div class="image-grid-item">
+					<%= link_to(image_tag(image.attachment.thumb.url), image.attachment_url) %><br />
+					<strong>Name: <%= image.name %></strong><br />
+					<%= link_to "Delete", admin_image_path(image), :method => :delete, confirm: "Are you sure?" %>
+				</div>
 			<% end %>
 		</div>
 	</div>
+	<%= link_to "Upload New Image", new_admin_image_path, class: "btn black-text" %>
 </div>
