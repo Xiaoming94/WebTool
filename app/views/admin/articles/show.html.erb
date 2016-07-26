@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 <div class="card white black-text">
 	<div class="card-content">
-		<p>
-			<strong>Title:</strong>
-			<h3><%= @article.title %></h3>
-		</p>
+		<strong>Title:</strong>
+		<h3 class="preview-title"><%= @article.title %></h3>
 
-		<p>
-			<strong>Content:</strong>
-			<%= markdown @article.content %>
-		</p>
+		<div class="preview-content">
+			<p>
+				<strong>Content:</strong>
+				<%= markdown @article.content %>
+			</p>
+		</div>
 	</div>
 </div>
 <%= link_to 'Edit', edit_admin_article_path(@article), class: "btn black-text" %>
