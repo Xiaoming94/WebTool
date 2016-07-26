@@ -8,11 +8,16 @@
 	</div>
 <% end %>
 <div class="admin-container">
-	<%= form_for ([:admin ,@item]), html: {multipart: true} do |f|%>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-		<%= f.label :attachment %>
-		<%= f.file_field :attachment %>
-		<%= f.submit "Save" %>
-	<% end %>
+	<h2>Upload a new File:</h2>
+	<div class="card white black-text">
+		<div class="card-content">
+		<%= form_for ([:admin ,@item]), html: {multipart: true} do |f|%>
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+			<%= f.label :attachment %>
+			<%= f.file_field :attachment %>
+			<%= f.submit "Save", class: "btn" %>
+		<% end %>
+		</div>
+	</div>
 </div>
