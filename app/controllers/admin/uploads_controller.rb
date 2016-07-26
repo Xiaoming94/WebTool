@@ -1,6 +1,6 @@
 class Admin::UploadsController < Admin::BaseController
   def index
-    @images = Image.all
-    @files  = Item.all
+    @images = Image.last(6)
+    @files  = Item.last(6)
   end
 end
