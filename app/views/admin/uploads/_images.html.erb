@@ -3,13 +3,16 @@
 	Manage you uploaded images. Here you can view the uploaded images. <br/>
 	Upload new images and delete uploaded images. <br /><br />
 </p>
+
+<div class="row image-grid">
 <% @images.each do |image| %>
-	<div class="image-grid-item">
-		<%= link_to(image_tag(image.attachament.thumb.url), image.attachment_url) %>
-		<strong>Name: </strong>
+	<div class="image-grid-item col s4">
+		<%= link_to(image_tag(image.attachment.thumb.url), image.attachment_url) %>
+		<br />
 		<%= image.name %>
 	</div>
 <% end %>
 
+</div>
 <%= link_to "View all Images", admin_images_path, class: "btn black-text" %>
 <%= link_to "Upload an Image", new_admin_image_path, class: "btn black-text" %>
