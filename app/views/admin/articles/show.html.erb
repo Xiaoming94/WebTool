@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
+<div class="card white black-text">
+	<div class="card-content">
+		<p>
+			<strong>Title:</strong>
+			<h3><%= @article.title %></h3>
+		</p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= markdown @article.content %>
-</p>
-
-<%= link_to 'Edit', edit_admin_article_path(@article) %> |
-<%= link_to 'Back', admin_articles_path %>
+		<p>
+			<strong>Content:</strong>
+			<%= markdown @article.content %>
+		</p>
+	</div>
+</div>
+<%= link_to 'Edit', edit_admin_article_path(@article), class: "btn black-text" %>
+<%= link_to 'Back', admin_articles_path, class: "btn black-text" %>
