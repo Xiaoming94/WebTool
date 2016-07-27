@@ -17,9 +17,9 @@
       <tr>
         <td><%= page.title %></td>
         <td><%= page.body %></td>
-        <td><%= link_to 'Show', admin_page_path(page) %></td>
-        <td><%= link_to 'Edit', edit_admin_page_path(page) %></td>
-        <td><%= link_to 'Destroy', admin_page_path(page), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', admin_page_path(page), class: "btn waves-effect waves-light blue black-text" %></td>
+        <td><%= link_to 'Edit', edit_admin_page_path(page), class: "btn waves-effect waves-light blue black-text" %></td>
+        <td><%= link_to 'Delete', admin_page_path(page), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn red darken-4 white-text" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,5 +29,5 @@
 </div>
 <br>
 
-<%= link_to 'New Page', new_admin_page_path, class: "btn black-text" %>
+<%= link_to 'New Page', new_admin_page_path, class: "btn waves-effect waves-light green accent-3 black-text" %>
 </div>
