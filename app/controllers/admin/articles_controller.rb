@@ -25,11 +25,16 @@ class Admin::ArticlesController < Admin::BaseController
   # POST /articles.json
   def create
     @article = Article.new(article_params)
-
     respond_to do |format|
       if @article.save
-        format.html { redirect_to [:admin, @article], notice: 'Article was successfully created.' }
-        format.json { render :show, status: :created, location: @article }
+        if params[:publish]
+          @article.update(published: true)
+          format.html { redirect_to [:admin, @article], notice: 'Article was successfully published.' }
+          format.json { render :show, status: :ok, location: @article }
+        else
+          format.html { redirect_to [:admin, @article], notice: 'Article was successfully created.' }
+          format.json { render :show, status: :created, location: @article }
+        end
       else
         format.html { render :new }
         format.json { render json: @article.errors, status: :unprocessable_entity }
@@ -42,8 +47,14 @@ class Admin::ArticlesController < Admin::BaseController
   def update
     respond_to do |format|
       if @article.update(article_params)
-        format.html { redirect_to [:admin, @article], notice: 'Article was successfully updated.' }
-        format.json { render :show, status: :ok, location: @article }
+        if params[:publish]
+          @article.update(published: true)
+          format.html { redirect_to [:admin, @article], notice: 'Article was successfully published.' }
+          format.json { render :show, status: :ok, location: @article }
+        else
+          format.html { redirect_to [:admin, @article], notice: 'Article was successfully updated.' }
+          format.json { render :show, status: :ok, location: @article }
+        end
       else
         format.html { render :edit }
         format.json { render json: @article.errors, status: :unprocessable_entity }
