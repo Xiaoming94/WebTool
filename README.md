@@ -47,9 +47,12 @@ Some Additional features also includes:
 ------
 To develop:
 1. Fork and clone.
+
 2. Generate a secret
+
 3. `$ rails s`
+
 4. do whatever you want.
 
 To deploy:
-Deploying this as you do with every other rails app is enough.
+Deploying this as you do with every other rails app is enough. i.e. with Phusion passenger + Apache/Nging
