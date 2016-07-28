@@ -46,6 +46,7 @@ Some Additional features also includes:
 ### Development and Deployment
 ------
 To develop:
+
 1. Fork and clone.
 
 2. Generate a secret
