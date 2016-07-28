@@ -9,3 +9,6 @@ I am writing this project as a part of my summer job in China aswell as in the p
 ------
 The Login screen to admin view:
 ![Login screen](screenshots/login.png)
+
+The admin Dashboard:
+![Dashboard](screenshots/dashboard.png)
