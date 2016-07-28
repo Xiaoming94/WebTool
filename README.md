@@ -7,8 +7,16 @@ I am writing this project as a part of my summer job in China aswell as in the p
 
 ### Some Screenshots
 ------
-The Login screen to admin view:
+
+##### The Login screen to admin view:
 ![Login screen](screenshots/login.png)
 
-The admin Dashboard:
+##### The admin Dashboard:
 ![Dashboard](screenshots/dashboard.png)
+
+##### More screens:
+![Articles Index view](screenshots/Articles-Index.png)
+
+![Form](screenshots/Form.png)
+
+![Image View](screenshots/Images.png)
