@@ -1,8 +1,9 @@
 class Admin::ModalsController < ApplicationController
   def picture
+    @pictures = Image.all
   end
 
-  def remote-picture
+  def remote_picture
   end
 
   def link
