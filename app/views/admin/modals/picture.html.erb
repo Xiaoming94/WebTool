@@ -1,8 +1,9 @@
 <h3>Select You Picture</h3>
-<div class="row">
+<div class="row pictures">
 <% Image.all.each do |pic| %>
 	<div class="col s2">
 		<%= link_to image_tag(pic.attachment.thumb.url),"#",class: "image"%>
+		<strong><%= pic.name %></strong>
 	</div>
 <%end%>
 </div>

@@ -1,3 +1,20 @@
 // Place all the styles related to the admin/modals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pictures {
+	.image {
+		padding: {
+			top: 15px;
+			bottom: 15px;
+			left: 5px;
+			right: 5px;
+		}
+		&:hover {
+			background-color: #bbdefb;
+		}
+	}
+	strong {
+		font-size: 2em;
+	}
+}
