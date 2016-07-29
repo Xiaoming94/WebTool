@@ -16,6 +16,11 @@ Rails.application.routes.draw do
     delete 'logout', to: 'base#destroy'
     get 'forbidden', to: 'base#forbidden'
     get 'uploads', to: 'uploads#index'
+    get 'modals/picture'
+    get 'modals/remote-picture'
+    get 'modals/link'
+    post 'modals/addpicture'
+    post 'modals/addlink'
     resources :pages
     resources :articles
     resources :images, :only => [:index, :new, :create, :destroy]

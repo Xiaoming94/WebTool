@@ -1,0 +1,2 @@
+module Admin::ModalsHelper
+end
