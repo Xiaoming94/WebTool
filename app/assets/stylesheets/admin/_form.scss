@@ -1,3 +1,10 @@
 .actions {
 	width:auto;
+	.form-actions {
+		position: relative;
+		margin: 0;
+		a {
+			margin:0;
+		}
+	}
 }
