@@ -6,12 +6,9 @@ $(document).ready ->
 	$('.modal-trigger').leanModal()
 	return
 
-@markSelected = (clicked) ->
-	if clicked.hasClass( "selected" )
-		appendImage
-	else
-		elems = document.getElementsByClassName('selected')
-		for d in elems
-			d.className = "image"
-		clicked.className += " selected modal-action modal-close"
+@markSelected = (clicked,link) ->
+	elems = document.getElementsByClassName('selected')
+	for d in elems
+		d.className = "image"
+	clicked.className += " selected modal-action modal-close"
 	return

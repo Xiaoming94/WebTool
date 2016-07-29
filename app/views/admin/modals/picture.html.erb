@@ -2,7 +2,7 @@
 <div class="row pictures">
 <% Image.all.each do |pic| %>
 	<div class="col s2">
-		<%= link_to image_tag(pic.attachment.thumb.url),"#",onClick: 'markSelected(this)',class: "image"%>
+		<%= link_to image_tag(pic.attachment.thumb.url),"#",onClick: "markSelected(this,'#{pic.attachment_url}')",class: "image"%>
 		<strong><%= pic.name %></strong>
 	</div>
 <%end%>
