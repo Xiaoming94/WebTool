@@ -1,2 +1,8 @@
-<h1>Admin::Modals#picture</h1>
-<p>Find me in app/views/admin/modals/picture.html.erb</p>
+<h3>Select You Picture</h3>
+<div class="row">
+<% Image.all.each do |pic| %>
+	<div class="col s2">
+		<%= link_to image_tag(pic.attachment.thumb.url),"#",class: "image"%>
+	</div>
+<%end%>
+</div>
