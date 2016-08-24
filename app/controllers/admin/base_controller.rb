@@ -5,7 +5,10 @@ class Admin::BaseController < ApplicationController
   end
 
   def login
-    render layout: "login"
+    if !admin_user_exists?
+      redirect_to
+    end
+      render layout: "login"
   end
 
   def create
