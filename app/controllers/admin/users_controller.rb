@@ -1,10 +1,10 @@
-class Admin::UsersController < ApplicationController
+class Admin::UsersController < Admin::BaseController
   before_action :set_admin_user, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/users
   # GET /admin/users.json
   def index
-    @admin_users = Admin::User.all
+    @admin_users = User.where(is_admin: true)
   end
 
   # GET /admin/users/1
@@ -14,7 +14,7 @@ class Admin::UsersController < ApplicationController
 
   # GET /admin/users/new
   def new
-    @admin_user = Admin::User.new
+    @admin_user = User.new
   end
 
   # GET /admin/users/1/edit
@@ -24,8 +24,8 @@ class Admin::UsersController < ApplicationController
   # POST /admin/users
   # POST /admin/users.json
   def create
-    @admin_user = Admin::User.new(admin_user_params)
-
+    @admin_user = User.new(admin_user_params)
+    @admin_user.is_admin = true
     respond_to do |format|
       if @admin_user.save
         format.html { redirect_to @admin_user, notice: 'User was successfully created.' }
@@ -69,6 +69,6 @@ class Admin::UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_user_params
-      params.fetch(:admin_user, {})
+      params.require(:user).permit(:name, :email, :username, :password, :password_confirmation)
     end
 end
