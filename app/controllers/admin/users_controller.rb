@@ -1,7 +1,8 @@
 class Admin::UsersController < ApplicationController
-  before_action :set_admin_user, only: [:show, :edit, :update, :destroy]
-
-  # GET /admin/users
+  before_action :set_admin_user, only: [:edit, :update]
+  before_action :test_is_admin, only:[:update,:edit]
+  layout "admin", only: [:update,:edit]
+  #GET /admin/users
   # GET /admin/users.json
   def index
     @admin_users = User.where(is_admin: true)
