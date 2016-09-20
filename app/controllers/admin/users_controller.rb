@@ -16,6 +16,7 @@ class Admin::UsersController < ApplicationController
   # GET /admin/users/new
   def new
     @admin_user = User.new
+    render layout: 'init'
   end
 
   # GET /admin/users/1/edit
