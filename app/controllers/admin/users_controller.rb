@@ -15,6 +15,7 @@ class Admin::UsersController < ApplicationController
 
   # GET /admin/users/new
   def new
+    if
     @admin_user = User.new
     render layout: 'init'
   end
@@ -66,11 +67,21 @@ class Admin::UsersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_user
-      @admin_user = Admin::User.find(params[:id])
+      @admin_user = User.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_user_params
       params.require(:user).permit(:name, :email, :username, :password, :password_confirmation)
+    end
+    def test_is_admin?
+      if !is_logged_in?
+        redirect_to admin_login_path
+      elsif !is_admin?
+        redirect_to admin_forbidden_path
+      end
+    end
+    def admin_user_exists?
+      return !User.find_by(is_admin: true).nil?
     end
 end
